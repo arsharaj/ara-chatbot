@@ -11,7 +11,7 @@ const popupColorLight = Color(0xFFBDF2ED);
 const primaryColorDark = Color(0xFF004c46);
 const accentColorDark = Color(0xFF98ee99);
 const backgroundColorDark = Color(0xFF007169);
-const popupColorDark = Color(0xFF1E6C22);
+const popupColorDark = Color(0xFF115325);
 
 // Not a theme specific color
 const iconColor = Color(0xFFBDF2ED);
