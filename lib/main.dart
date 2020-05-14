@@ -2,10 +2,12 @@
 // Built in Libraries
 import 'package:flutter/material.dart';
 // Utils
-import './utils/light_theme.dart';
-import './utils/dark_theme.dart';
+import 'package:ara_chatbot/utils/light_theme.dart';
+import 'package:ara_chatbot/utils/dark_theme.dart';
+
 // Custom components screens library
-import './components/home_page.dart';
+import 'package:ara_chatbot/components/home_page.dart';
+import 'package:ara_chatbot/components/privacy_policy.dart';
 
 // Main function - Starting point of the program.
 void main() {
@@ -27,10 +29,10 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       // All the routes to the app screens
       routes: {
-        '/':(context) => HomePage(title: 'Ara',),
+        '/':(context) => HomePage(title:'Ara',),
         '/settings':(context) => Scaffold(),
         '/help':(context) => Scaffold(),
-        '/privacy':(context) => Scaffold(),
+        '/privacy':(context) => PrivacyPolicy(title:'Privacy Policy',),
         '/terms':(context) => Scaffold(),
         '/about':(context) => Scaffold(),
       },
