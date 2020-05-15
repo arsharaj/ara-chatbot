@@ -8,6 +8,7 @@ import 'package:ara_chatbot/utils/dark_theme.dart';
 // Custom components screens library
 import 'package:ara_chatbot/components/home_page.dart';
 import 'package:ara_chatbot/components/privacy_policy.dart';
+import 'package:ara_chatbot/components/terms_of_services.dart';
 
 // Main function - Starting point of the program.
 void main() {
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         '/settings':(context) => Scaffold(),
         '/help':(context) => Scaffold(),
         '/privacy':(context) => PrivacyPolicy(title:'Privacy Policy',),
-        '/terms':(context) => Scaffold(),
+        '/terms':(context) => TermsOfServices(title: "Terms of Services",),
         '/about':(context) => Scaffold(),
       },
     );
