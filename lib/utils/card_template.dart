@@ -4,25 +4,29 @@ import 'package:ara_chatbot/utils/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 // Skeleton of the card in privacy policy.
-class PrivacyCard extends StatelessWidget {
+class CardTemplate extends StatelessWidget {
 
   // Body and Headline of the privacy card
   final String heading,body;
+  // For alternate background color
+  final int status;
 
   // Initialization of colors in the privacy
-  PrivacyCard({
+  CardTemplate({
     this.heading,
-    this.body
+    this.body,
+    this.status
   });
 
   @override
   Widget build(BuildContext context) {
 
-    final backgroundColor=(MediaQuery.of(context).platformBrightness == Brightness.light) ? backgroundColorShadeLight : backgroundColorShadeDark;
+    final backgroundColorShade=(MediaQuery.of(context).platformBrightness == Brightness.light) ? backgroundColorShadeLight : backgroundColorShadeDark;
+    final backgroundColor=(MediaQuery.of(context).platformBrightness == Brightness.light) ? backgroundColorLight : backgroundColorDark;
     final textColor=(MediaQuery.of(context).platformBrightness == Brightness.light) ? textColorLight : textColorDark;
 
     return Container(
-      color: backgroundColor,
+      color: (status==1)?backgroundColorShade:backgroundColor,
       padding: EdgeInsets.all(20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
