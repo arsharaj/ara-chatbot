@@ -10,6 +10,7 @@ ThemeData darkTheme = ThemeData(
   accentColor: accentColorDark,  
   backgroundColor: backgroundColorDark,
   textTheme: mainTextTheme,
+  cursorColor: backgroundColorDark,
   appBarTheme: AppBarTheme(
     textTheme: appbarTextThemeDark,
     iconTheme: IconThemeData(
