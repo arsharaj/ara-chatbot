@@ -18,7 +18,6 @@ void main() {
 
 // MyApp - Starting widget of the app
 class MyApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     // Use the material app theming and design.
@@ -31,12 +30,20 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       // All the routes to the app screens
       routes: {
-        '/':(context) => HomePage(title:'Ara',),
-        '/settings':(context) => Scaffold(),
-        '/help':(context) => HelpAndFeedback(title: 'Help & Feedback',),
-        '/privacy':(context) => PrivacyPolicy(title:'Privacy Policy',),
-        '/terms':(context) => TermsOfServices(title: 'Terms of Services',),
-        '/about':(context) => Scaffold(),
+        '/': (context) => HomePage(
+              title: 'Ara',
+            ),
+        '/settings': (context) => Scaffold(),
+        '/help': (context) => HelpAndFeedback(
+              title: 'Help & Feedback',
+            ),
+        '/privacy': (context) => PrivacyPolicy(
+              title: 'Privacy Policy',
+            ),
+        '/terms': (context) => TermsOfServices(
+              title: 'Terms of Services',
+            ),
+        '/about': (context) => Scaffold(),
       },
     );
   }

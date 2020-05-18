@@ -7,7 +7,7 @@ import 'package:ara_chatbot/utils/text_styles.dart';
 // Dark theme for Ara
 ThemeData darkTheme = ThemeData(
   primaryColor: primaryColorDark,
-  accentColor: accentColorDark,  
+  accentColor: accentColorDark,
   backgroundColor: backgroundColorDark,
   textTheme: mainTextTheme,
   cursorColor: backgroundColorDark,

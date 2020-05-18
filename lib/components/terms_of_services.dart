@@ -8,16 +8,18 @@ import 'package:ara_chatbot/utils/terms_data.dart';
 class TermsOfServices extends StatelessWidget {
   // Title of the privacy screen
   final String title;
-  
-  TermsOfServices({Key key, this.title}):super(key:key);
+
+  TermsOfServices({Key key, this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
-    final Color backgroundColor = (MediaQuery.of(context).platformBrightness == Brightness.light) ? backgroundColorLight : backgroundColorDark;
+    final Color backgroundColor =
+        (MediaQuery.of(context).platformBrightness == Brightness.light)
+            ? backgroundColorLight
+            : backgroundColorDark;
 
     return Scaffold(
-      backgroundColor: backgroundColor, 
+      backgroundColor: backgroundColor,
       appBar: AppBar(
         title: Text(title),
       ),

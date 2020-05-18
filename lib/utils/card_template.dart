@@ -5,28 +5,31 @@ import 'package:google_fonts/google_fonts.dart';
 
 // Skeleton of the card in privacy policy.
 class CardTemplate extends StatelessWidget {
-
   // Body and Headline of the privacy card
-  final String heading,body;
+  final String heading, body;
   // For alternate background color
   final int status;
 
   // Initialization of colors in the privacy
-  CardTemplate({
-    this.heading,
-    this.body,
-    this.status
-  });
+  CardTemplate({this.heading, this.body, this.status});
 
   @override
   Widget build(BuildContext context) {
-
-    final backgroundColorShade=(MediaQuery.of(context).platformBrightness == Brightness.light) ? backgroundColorShadeLight : backgroundColorShadeDark;
-    final backgroundColor=(MediaQuery.of(context).platformBrightness == Brightness.light) ? backgroundColorLight : backgroundColorDark;
-    final textColor=(MediaQuery.of(context).platformBrightness == Brightness.light) ? textColorLight : textColorDark;
+    final backgroundColorShade =
+        (MediaQuery.of(context).platformBrightness == Brightness.light)
+            ? backgroundColorShadeLight
+            : backgroundColorShadeDark;
+    final backgroundColor =
+        (MediaQuery.of(context).platformBrightness == Brightness.light)
+            ? backgroundColorLight
+            : backgroundColorDark;
+    final textColor =
+        (MediaQuery.of(context).platformBrightness == Brightness.light)
+            ? textColorLight
+            : textColorDark;
 
     return Container(
-      color: (status==1)?backgroundColorShade:backgroundColor,
+      color: (status == 1) ? backgroundColorShade : backgroundColor,
       padding: EdgeInsets.all(20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

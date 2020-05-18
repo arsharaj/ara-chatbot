@@ -1,8 +1,8 @@
 // Last Update
-const updateDate="Last updated: 11 May 2020";
+const updateDate = "Last updated: 11 May 2020";
 
 // Abstract
-const abstractIntro="""
+const abstractIntro = """
 I, Arsharaj Chauhan operates Ara Chatbot app. This policy will inform you everything regarding the collection, use and 
 disclosure of Personal Information I receive from users of the app.
 
@@ -10,8 +10,8 @@ I use your Personal Information only for providing and improving the app. By usi
 and use of information in accordance with this policy.""";
 
 // Introduction
-const introHeading="Information Collection And Use";
-const introBody="""
+const introHeading = "Information Collection And Use";
+const introBody = """
 While using my app, I may ask you to provide me with certain personally identifiable information that can be used to contact 
 or identify you. Personally identifiable information may include, but is not limited to your name, email address, search 
 history.
@@ -19,21 +19,21 @@ history.
 This collected information is used to improve the system and provide better services.""";
 
 // Log Data
-const logHeading="Log Data";
-const logBody="""
+const logHeading = "Log Data";
+const logBody = """
 Like many apps, I may use third party services such as Google Analytics that collect, monitor and analyze this information 
 for better experience. I explicity mention that, I use Dialogflow as a third party agent to provide human-like interaction
 in the app, the data is logged here anonymously for improvement of the system.""";
 
 // Communications
-const commHeading="Communications";
-const commBody="""
+const commHeading = "Communications";
+const commBody = """
 I may use your Personal Information to contact you with newsletters, marketing or promotional materials and other information 
 that include your social profile links that you provide me.""";
 
 // Cookies
-const cookieHeading="Cookies";
-const cookieBody="""
+const cookieHeading = "Cookies";
+const cookieBody = """
 Cookies are files with small amount of data, which may include an anonymous unique identifier. Cookies are sent to your 
 browser from a web site and stored on your computer's hard drive.
 
@@ -41,15 +41,15 @@ Ara does not use cookies in any form. As soon as you leave the app everything is
 relaunch.""";
 
 // Security
-const securityHeading="Security";
-const securityBody="""
+const securityHeading = "Security";
+const securityBody = """
 The security of your Personal Information is important to me, but remember that no method of transmission over the Internet, 
 or method of electronic storage, is 100% secure. While I strive to use commercially acceptable means to protect your 
 Personal Information, I cannot guarantee its absolute security.""";
 
 // Changes
-const changesHeading="Changes To This Privacy Policy";
-const changesBody="""
+const changesHeading = "Changes To This Privacy Policy";
+const changesBody = """
 This Privacy Policy is effective as of 11 May 2020 and will remain in effect except with respect to any changes in its 
 provisions in the future, which will be in effect immediately after being posted on this page.
 
@@ -61,8 +61,8 @@ If I make any material changes to this Privacy Policy, I will notify you either 
 sending notifications.""";
 
 // Contact Me
-const contactHeading="Contact Me";
-const contactBody="""
+const contactHeading = "Contact Me";
+const contactBody = """
 If you have any questions about this Privacy Policy, please contact me via email or any other social account.
 
 Email Address : arsharajchauhan343@gmail.com

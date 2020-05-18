@@ -5,11 +5,10 @@ import 'package:ara_chatbot/components/pop_up_menu.dart';
 
 // Home Page - The main screen of the app where user interact most of the time.
 class HomePage extends StatefulWidget {
-
   // The title of the application
   final String title;
 
-  HomePage({Key key, this.title}) : super(key: key);  
+  HomePage({Key key, this.title}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -17,16 +16,16 @@ class HomePage extends StatefulWidget {
 
 // Manage all the states of the applications seperately.
 class _HomePageState extends State<HomePage> {
-  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: (MediaQuery.of(context).platformBrightness == Brightness.light) ? backgroundColorLight : backgroundColorDark, 
+      backgroundColor:
+          (MediaQuery.of(context).platformBrightness == Brightness.light)
+              ? backgroundColorLight
+              : backgroundColorDark,
       appBar: AppBar(
         title: Text(widget.title),
-        actions: <Widget>[
-          PopUpMenu()
-        ],
+        actions: <Widget>[PopUpMenu()],
       ),
     );
   }

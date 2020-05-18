@@ -1,3 +1,6 @@
+# Api Personal Access Tokens
+secrets/
+
 # Development Specific
 .vscode
 .idea
