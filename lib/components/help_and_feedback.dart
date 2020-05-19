@@ -1,5 +1,7 @@
 // Include all the required files
 import 'package:flutter/material.dart';
+import 'package:ara_chatbot/utils/bottom_nav.dart';
+import 'package:ara_chatbot/utils/create_issue.dart';
 import 'package:ara_chatbot/utils/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -15,6 +17,7 @@ class HelpAndFeedback extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Some theme color tweaks
     final Color backgroundColor =
         (MediaQuery.of(context).platformBrightness == Brightness.light)
             ? backgroundColorLight
@@ -23,14 +26,14 @@ class HelpAndFeedback extends StatelessWidget {
         (MediaQuery.of(context).platformBrightness == Brightness.light)
             ? textColorLight
             : textColorDark;
-    final Color buttonTextColor =
-        (MediaQuery.of(context).platformBrightness == Brightness.dark)
-            ? textColorLight
-            : textColorDark;
     final Color buttonColor =
         (MediaQuery.of(context).platformBrightness == Brightness.dark)
             ? accentColorDark
             : accentColorLight;
+    // final Color buttonTextColor =
+    //     (MediaQuery.of(context).platformBrightness == Brightness.dark)
+    //         ? textColorLight
+    //         : textColorDark;
 
     return Scaffold(
       backgroundColor: backgroundColor,
@@ -43,7 +46,7 @@ class HelpAndFeedback extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text(
-              "Descibe an issue",
+              "Describe your issue",
               style: GoogleFonts.merriweather(
                 fontSize: 16,
                 color: textColor,
@@ -75,11 +78,9 @@ class HelpAndFeedback extends StatelessWidget {
                   icon: Icon(Icons.send),
                   color: buttonColor,
                   onPressed: () {
-                    // TODO
-                    if (controller.text == "") {
-                      print("Empty text field!!");
-                    } else {
-                      print(controller.text);
+                    if (controller.text != "") {
+                      CreateIssue newIssue = CreateIssue(data: controller.value.text);
+                      newIssue.sendIssue();
                     }
                     controller.text = "";
                   },
@@ -89,54 +90,9 @@ class HelpAndFeedback extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            Center(
-              child: Column(
-                children: <Widget>[
-                  Text(
-                    "How much do you like Ara?",
-                    style: GoogleFonts.merriweather(
-                      color: textColor,
-                      fontSize: 20,
-                    ),
-                  ),
-                  SizedBox(height: 10),
-                  RaisedButton(
-                    onPressed: () {},
-                    child: Text(
-                      "Rate on Google Playstore",
-                    ),
-                    color: buttonColor,
-                    textColor: buttonTextColor,
-                  ),
-                ],
-              ),
-            ),
-            Expanded(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: <Widget>[
-                  GestureDetector(
-                    onTap: () => Navigator.pushNamed(context, "/privacy"),
-                    child: Text(
-                      "Privacy Policy",
-                      style: GoogleFonts.merriweather(
-                        color: textColor,
-                      ),
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () => Navigator.pushNamed(context, "/terms"),
-                    child: Text(
-                      "Terms of Services",
-                      style: GoogleFonts.merriweather(
-                        color: textColor,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            // TODO
+            // RatePlaystore(textColor: textColor, buttonColor: buttonColor, buttonTextColor: buttonTextColor),
+            BottomNav(textColor: textColor),
           ],
         ),
       ),
