@@ -10,9 +10,13 @@ import 'package:ara_chatbot/components/home_page.dart';
 import 'package:ara_chatbot/components/privacy_policy.dart';
 import 'package:ara_chatbot/components/terms_of_services.dart';
 import 'package:ara_chatbot/components/help_and_feedback.dart';
+import 'package:ara_chatbot/components/about_me.dart';
+import 'package:flutter/services.dart';
 
 // Main function - Starting point of the program.
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp,DeviceOrientation.portraitDown]);
   runApp(MyApp());
 }
 
@@ -43,7 +47,9 @@ class MyApp extends StatelessWidget {
         '/terms': (context) => TermsOfServices(
               title: 'Terms of Services',
             ),
-        '/about': (context) => Scaffold(),
+        '/about': (context) => AboutMe(
+          title: "About Me"
+        ),
       },
     );
   }

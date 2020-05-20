@@ -59,6 +59,7 @@ class TermsOfServices extends StatelessWidget {
           CardTemplate(
             heading: contactHeading,
             body: contactBody,
+            status: 1,
           ),
         ],
       ),
